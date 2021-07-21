@@ -12,6 +12,10 @@ BOT_NAME = 'music_crawler'
 SPIDER_MODULES = ['music_crawler.spiders']
 NEWSPIDER_MODULE = 'music_crawler.spiders'
 
+FILES_STORE = 'donwloads'
+ 
+DEFAULT_FILES_URLS_FIELD = 'file_urls'
+DEFAULT_FILES_RESULT_FIELD = 'files'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'music_crawler (+http://www.yourdomain.com)'

@@ -6,8 +6,6 @@
 import scrapy
 
 
-class MusicCrawlerItem(scrapy.Item):
-    title = scrapy.Field()
-    artist = scrapy.Field()
-    lyric = scrapy.Field()
-    theme = scrapy.Field()
+class AlbumArt(scrapy.Item):
+    file_urls = scrapy.Field()
+    files = scrapy.Field()
