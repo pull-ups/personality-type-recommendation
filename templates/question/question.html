@@ -2,6 +2,62 @@
 <!--
 <a href="{% url 'result' %}">see result</a>
 -->
+<form action="/recommend/result" method="post">
+
+<p>Q1</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q2</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q3</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q4</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q5</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q6</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q7</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<p>Q8</p>
+{% for i in "x"|rjust:"7" %}
+    <input type="radio" name="q1"/>
+     {{ forloop.counter }}
+     &nbsp;&nbsp; 
+{% endfor %}
+<br>
+<input type="submit" value="입력">
+</form>
+
+
+<br>
 <button type="button" onclick="location.href='/recommend/result'"">
     see result
 </button>
