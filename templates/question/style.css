@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.title-wrap {
+    margin-top: 2rem;
+}
+
+.title {
+    color: #E50914;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.contributor-wrap {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contributor {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #C4C4C4;
+}
+
+.question-wrap {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.question {
+    width: 90%;
+    margin: auto;
+}
+
+.answer-wrap {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.answer {
+    width: 90%;
+    margin: auto;
+}
+
+.left-answer {
+    text-align: left;
+    display: inline-block;
+    margin-right: 5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.right-answer {
+    text-align: right;
+    display: inline-block;
+    margin-left: 5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.logo-wrap {
+    text-align: center;
+    margin-top: 7rem; 
+}
+
+.logo{
+    width: 60%;
+}
+
+.content-wrap {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.content {
+    color: #C4C4C4;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.button-wrap {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.next-button-wrap {
+    text-align: right;
+    margin-top: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.movie-title {
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.movie-top4 {
+    display: inline-block;
+}
+
+.movie-poster {
+    object-fit: cover;
+    width: 80%;
+}
+
+.movie-name {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    
+}
+
+.music-title {
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.music-top4 {
+    display: inline-block;
+}
+
+.music-image {
+    object-fit: cover;
+    width: 80%;
+}
+
+.music-name {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+input[type='button'] {
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    background-color:#E50914;
+    color: black;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    border: 4px solid #E50914;
+    background-color: black;
+}
+
+input[type="radio"]:checked {
+    display: inline-block;
+    border-radius: 100%;
+    border: 4px solid #E50914;
+    background-color: #E50914;
+}
+
+#next-btn {
+    width: 6rem;
+    height: 2rem;
+    font-size: 1.3rem;
+    border-radius: 0.3rem;
+}
+
+#btn1, #btn7 {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.4rem;
+}
+
+#btn2, #btn6 {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.3rem;
+}
+
+#btn3, #btn5 {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.2rem;
+}
+
+#btn4 {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0.1rem;
+}
+
+#movie1, #movie2, #movie3, #movie4 {
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  @media (min-width: 800px) {
+    #movie1, #movie2, #movie3, #movie4 {
+      width: 24%;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  #music1, #music2, #music3, #music4 {
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  @media (min-width: 800px) {
+    #music1, #music2, #music3, #music4 {
+      width: 24%;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
