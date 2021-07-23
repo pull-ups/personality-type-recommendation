@@ -1,3 +1,5 @@
-from django.test import TestCase
+from Recommendation import Recommendation
+import pandas as pd
 
-# Create your tests here.
+a=pd.read_csv("question/movie_data.csv")
+print(a)

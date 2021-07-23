@@ -1,14 +1,100 @@
-<h1>result</h1>
-<!--
-<a href="{% url 'main' %}">go to main</a>
--->
-<p>User Input:</p>
-{% for answer in inputvector %}
-    {{ answer }}<br>
-{% endfor %}
-<br>
-<button type="button" onclick="location.href='/recommend/'"">
-   
-    go to main
-</button>
+{% load common_tags %}
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUFLIX</title>
+    {{oct_script}}
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/static/M.png" /> </head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    {{oct_content}}
+    <div class = "title-wrap">
+        <div class = "title">
+            MUFLIX
+        </div>
+    </div>
+    <div class = "result-wrap">
+        <div class = "visualization-wrap">
+
+        </div>
+        <div class = "movie-wrap">
+            <div class = "movie-title">
+                영화 추천
+            </div>
+            <div class = "movie-top4">
+                {% for i in "x"|rjust:"4" %}
+                    <div class = "movie" id = "movie1">
+                        <img src="/static/img/movie/movieimage_{{movie_id_arr|get_at_index:forloop.counter0}}.jpg" class = "movie-poster"
+                            onclick="document.getElementById('modal1-{{forloop.counter0}}').style.display='block'">
+                        <div class = "movie-name">{{title_arr|get_at_index:forloop.counter0}}</div>
+                        <div>평점 :{{rating_arr|get_at_index:forloop.counter0}} </div>
+                        
+                    </div>
+                {% endfor %}
+
+
+
+
+
+
+            </div>
+        </div>
+        
+        {% for i in "x"|rjust:"4" %}
+            <div class = "modal-background" id="modal1-{{forloop.counter0}}">
+                <div class="modal">
+                    <div class="modal-container">
+                        <div class="modal-header">
+                            <div class="modal-title">가버나움</div>
+                            <span onclick="document.getElementById('modal1-{{forloop.counter0}}').style.display='none'"
+                        class="close-btn">&times;</span>
+                        </div>
+                        <div class="modal-image-wrap">
+                            <img src = "/static/img/movie/movieimage_{{movie_id_arr|get_at_index:forloop.counter0}}.jpg" class = "modal-image">
+                        </div>
+                        <div class="modal-content">
+                            <p>
+                                {{summary_arr|get_at_index:forloop.counter0}}
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        {% endfor %}
+
+
+        <div class = "music-wrap">
+            <div class = "music-title">
+                음악 추천
+            </div>
+            <div class = "music-top4">
+                <div class = "music" id = "music1">
+                    <img src="/static/img/music/라일락.jpg" class = "music-image">
+                    <div class = "music-name">라일락 | 아이유(IU)</div>
+                </div>
+                <div class = "music" id = "music2">
+                    <img src="/static/img/music/블루밍.jpg" class = "music-image">
+                    <div class = "music-name">Blueming | 아이유(IU)</div>
+                </div>
+                <div class = "music" id = "music3">
+                    <img src="/static/img/music/에잇.jpg" class = "music-image">
+                    <div class = "music-name">에잇(Prod.&Feat. SUGA of BTS) | 아이유(IU)</div>
+                </div>
+                <div class = "music" id = "music4">
+                    <img src="/static/img/music/밤편지.jpg" class = "music-image">
+                    <div class = "music-name">밤편지 | 아이유(IU)</div>
+                </div>
+            
+        </div>
+    </div>
+    <button type="button" onclick="location.href='/recommend/'"">MAIN</button>
+</body>
+</html>
