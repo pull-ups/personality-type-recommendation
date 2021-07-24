@@ -1,0 +1,91 @@
+<!--
+<a href="{% url 'result' %}">see result</a>
+-->
+<!--
+<form action="{% url 'question2' %}" method="post">
+    {% csrf_token %}
+
+    <p>Q1</p>
+    <input type="radio" id="choice1" value="1" name="q1" >
+    <input type="radio" id="choice2" value="2" name="q1"/>
+    <input type="radio" id="choice3" value="3" name="q1"/>
+    <input type="radio" id="choice4" value="4" name="q1"/>
+    <input type="radio" id="choice5" value="5" name="q1"/>
+    <input type="radio" id="choice6" value="6" name="q1"/>
+    <input type="radio" id="choice7" value="7" name="q1"/>
+
+
+<br>
+<input type="submit" value="입력">
+</form>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUFLIX</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/M.png" /> </head>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <div id = "question">
+        <div id = "main">
+            <div class = "title-wrap">
+                <div class = "title">
+                    MUFLIX
+                </div>
+            </div>
+
+            <div class = "question-wrap">
+                <h2 class = "question">
+                    1. 오랜만에 찾아온 주말, 힐링을 위해 무엇을 하고싶은가요?
+                </h2>
+                <img src = "/static/img/question1.png" class = "question-img">
+            </div>
+            <div class = "answer-wrap">
+                <div class = "answer">
+                    
+                    <form action="{% url 'question2' %}" method="post">
+                        {% csrf_token %}
+                    
+                        <input type="radio" id="btn1" value="1" name="q1" >
+                        <label for="btn1" id = "l_btn1"></label>
+                        <input type="radio" id="btn2" value="2" name="q1"/>
+                        <label for="btn2" id = "l_btn2"></label>
+                        <input type="radio" id="btn3" value="3" name="q1"/>
+                        <label for="btn3" id = "l_btn3"></label>
+                        <input type="radio" id="btn4" value="4" name="q1"/>
+                        <label for="btn4" id = "l_btn4"></label>
+                        <input type="radio" id="btn5" value="5" name="q1"/>
+                        <label for="btn5" id = "l_btn5"></label>
+                        <input type="radio" id="btn6" value="6" name="q1"/>
+                        <label for="btn6" id = "l_btn6"></label>
+                        <input type="radio" id="btn7" value="7" name="q1"/>
+                        <label for="btn7" id = "l_btn7"></label>
+
+                    
+                    <br>
+                    <div class = dir-answer-wrap>
+                        <div class = "left-answer">집에서 쉬기</div>
+                        <div class = "right-answer">집 밖으로 나가기</div> 
+                    </div>
+                    <div class = "next-button-wrap"> 
+                        <button type="submit" id="next-btn">NEXT</button>    
+                    </div>
+                    </form>
+              
+
+                </div>
+
+            </div>
+            
+            
+
+        </div>
+    </div>
+</body>
+</html>

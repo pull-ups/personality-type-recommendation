@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUFLIX</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/M.png" /> </head>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <div id = "question">
+        <div id = "main">
+            <div class = "title-wrap">
+                <div class = "title">
+                    MUFLIX
+                </div>
+            </div>
+
+            <div class = "question-wrap">
+                <h2 class = "question">
+                    8. 일을 시작할 때 가장 먼저 할 일은?
+                </h2>
+                <img src = "/static/img/question8.png" class = "question-img">
+            </div>
+            <div class = "answer-wrap">
+                <div class = "answer">
+                    
+                    <form action="{% url 'result' %}" method="post">
+                        {% csrf_token %}
+                    
+                        <input type="radio" id="btn1" value="1" name="q8" >
+                        <label for="btn1" id = "l_btn1"></label>
+                        <input type="radio" id="btn2" value="2" name="q8"/>
+                        <label for="btn2" id = "l_btn2"></label>
+                        <input type="radio" id="btn3" value="3" name="q8"/>
+                        <label for="btn3" id = "l_btn3"></label>
+                        <input type="radio" id="btn4" value="4" name="q8"/>
+                        <label for="btn4" id = "l_btn4"></label>
+                        <input type="radio" id="btn5" value="5" name="q8"/>
+                        <label for="btn5" id = "l_btn5"></label>
+                        <input type="radio" id="btn6" value="6" name="q8"/>
+                        <label for="btn6" id = "l_btn6"></label>
+                        <input type="radio" id="btn7" value="7" name="q8"/>
+                        <label for="btn7" id = "l_btn7"></label>
+
+                    
+                    <br>
+                    <div class = dir-answer-wrap>
+                        <div class = "left-answer">감을 잡기 위해 자료조사부터</div>
+                        <div class = "right-answer">기한에 맞추기 위해 스케쥴링부터</div> 
+                    </div>
+                    <div class = "next-button-wrap"> 
+                        <button type="submit" id="next-btn">NEXT</button>    
+                    </div>
+                    </form>
+              
+
+                </div>
+
+            </div>
+            
+            
+
+        </div>
+    </div>
+</body>
+</html>
