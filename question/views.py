@@ -42,7 +42,7 @@ def question8(request):
     return render(request, 'question/question8.html')
 
 import codecs
-
+import shutil
 def result(request):
     q8=request.POST['q8']
     inputvector[7]=int(q8)
@@ -54,6 +54,10 @@ def result(request):
     summary_arr=movie_result['summary'].tolist()
     octagon=radar_chart(inputvector)
     octagon_html=codecs.open("render.html", 'r').read()
+    filename = 'render.html' 
+    src = '' 
+    dir = 'static/html/' 
+    shutil.move(src + filename, dir + filename)
 
     octagon_scripttag=octagon_html.split("</title>")[1].split("</head>")[0]
     octagon_content=octagon_html.split("<body>")[1].split("</body>")[0]
@@ -64,11 +68,7 @@ def result(request):
     music_artist_arr=music_result['Artist'].tolist()
     music_album_arr=music_result['Album'].tolist()
     music_lyric_arr=music_result['Lyric'].tolist()
-    print(music_title_arr)
-    print(music_artist_arr)
-    print(music_album_arr)
-    print(music_lyric_arr)
-    
+
     return render(request, 'question/result.html', {'movie_id_arr':movie_id_arr, 'title_arr':title_arr, 'rating_arr':rating_arr, 'summary_arr':summary_arr, 
                                                     'music_id_arr':music_id_arr, 'music_title_arr':music_title_arr, 'music_artist_arr':music_artist_arr, 'music_album_arr':music_album_arr, 'music_lyric_arr':music_lyric_arr,
                                                     "oct_script":octagon_scripttag, "oct_content":octagon_content})

@@ -322,3 +322,10 @@ input[type="radio"]:checked + label {
       margin-top: 2rem;
     
   }
+
+
+  .chart-container {
+    text-align: center;
+    margin:auto;
+    
+}
