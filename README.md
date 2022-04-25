@@ -21,5 +21,6 @@
     - 각 영화/음악이 가지고 있는 텍스트 데이터 0.8/장르 0.2 비중으로 반영하여 -1 ~ 1로 정규화
     - 사용자의 응답을 -1 ~ 1로 정규화하여 각 영화/음악 성향 축과의 Euclidean Distance 계산 후 거리 짧은 순으로 추천
 4. Web Implemention
+![muflix](https://user-images.githubusercontent.com/59776953/165169028-46ed4c5d-7241-48da-aa60-d7a371481180.png)
 	- `Django` 로 웹사이트 구현
-	- AWS의 `Lightsail`을 통하여 배포
+	- `AWS`의 `Lightsail`을 통하여 배포
