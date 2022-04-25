@@ -2,7 +2,7 @@
 ## 프로젝트 개요
 
 - 심리테스트를 통하여 사용자의 취향이 입력되면 영화와 음악을 추천해주는 시스템
-- `Python` `Recommendation System` `NLP` `Django` 
+- `Python` `Recommender System` `NLP` `Django` 
 
 ## 프로젝트 과정
 1. Data Collection
